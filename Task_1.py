@@ -3,6 +3,14 @@
 #m=750
 #Output:2
 
-n=int(input('Введите n: '))
-m=int(input('Введите m: '))
-print(m/n+(m//n)%n)
+n=int(input('Введите скорость автомобиля в км/день n: '))
+m=int(input('Введите расстояние в км m: '))
+print(int(m/n+(m/n)%n)) #print(math.ceil(m,n))
+
+#Другой вариант решения
+#n=int(input('Введите скорость автомобиля в км/день n: '))
+#m=int(input('Введите расстояние в км m: '))
+#def arg(n,m):
+#    return(m+n-1)//n
+#res=arg(n,m)
+#print(res)
