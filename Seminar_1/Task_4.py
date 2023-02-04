@@ -12,7 +12,7 @@ def num_input(invite_msg):                              #Функция пров
         print('Нужно ввести целое число. Попытайтесь снова')
         return num_input(invite_msg)
 
-year=int(input('Введите номер года: '))
+year=input('Введите номер года: ')
 if year%400==0 or year%100!=0 and year %4==0:
     print('YES')
 else:
