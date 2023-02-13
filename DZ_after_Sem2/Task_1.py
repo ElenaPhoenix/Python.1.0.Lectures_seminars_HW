@@ -22,3 +22,13 @@ for temp in list1:
 if count<min_count:
     min_count=count
 print(f'Нужно перевернуть минимум {min_count} монет')
+
+
+#Другой вариант решения
+# count=0
+# for temp in list1:
+# if temp==0:
+# count+=1
+# if count> (n - count):
+# count=n - count
+# print(f'Нужно перевернуть минимум {count} монет')
