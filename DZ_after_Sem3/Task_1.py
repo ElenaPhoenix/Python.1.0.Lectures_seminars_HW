@@ -10,7 +10,6 @@ print(my_list)
 x=int(input('Введите искомое число: '))
 
 counter=0
-
 for i in range(0, len(my_list)):
     if my_list[i]==x:
         counter+=1
