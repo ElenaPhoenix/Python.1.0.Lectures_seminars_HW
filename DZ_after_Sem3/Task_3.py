@@ -30,3 +30,67 @@ dictionary={1: 'AEILNORSTUАВЕИНОРСТ',
     10: 'QZФЩЪ'}
 
 print('Стоимость слова =', sum([k for i in word for k, v in dictionary.items() if i in v]), 'очков')
+
+
+#Другой вариант решения
+# values_letters={1: {'A', 'E', 'I', 'L', 'N', 'O', 'R', 'S', 'T', 'U', 'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'},
+# 2: {'D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У'},
+# 3: {'B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я'},
+# 4: {'F', 'H', 'V', 'W', 'Y', 'Й', 'Ы'},
+# 5: {'K', 'Ж', 'З', 'Х', 'Ц', 'Ч'},
+# 8: {'J', 'X', 'Ш', 'Э', 'Ю'},
+# 10: {'Q', 'Z', 'Ф', 'Щ', 'Ъ'}}
+
+# word=input('Введите слово: ').upper()
+# points=0
+# for letter in word:
+#     for k, v in values_letters.items():
+#         if letter in v:
+#             points +=k
+#             break
+# print(f'Стоимость слова = {points} очков')
+
+
+#Другой вариант решения
+# def word_value(word):
+# english_scrabble = {'A': 1, 'E': 1, 'I': 1, 'O': 1, 'U': 1, 'L': 1, 'N': 1, 'S': 1, 'T': 1, 'R': 1, 'D': 2, 'G': 2, 'B': 3, 'C': 3, 'M': 3, 'P': 3, 'F': 4, 'H': 4, 'V': 4, 'W': 4, 'Y': 4, 'K': 5, 'J': 8, 'X': 8, 'Q': 10, 'Z': 10}
+# russian_scrabble = {'А': 1, 'В': 1, 'Е': 1, 'И': 1, 'Н': 1, 'О': 1, 'Р': 1, 'С': 1, 'Т': 1, 'Д': 2, 'К': 2, 'Л': 2, 'М': 2, 'П': 2, 'У': 2, 'Б': 3, 'Г': 3, 'Ё': 3, 'Ь': 3, 'Я': 3, 'Й': 4, 'Ы': 4, 'Ж': 5, 'З': 5, 'Х': 5, 'Ц': 5, 'Ч': 5, 'Ш': 8, 'Э': 8, 'Ю': 8, 'Ф': 10, 'Щ': 10, 'Ъ': 10}
+# if word.isalpha():
+#     if word.isascii():
+#         return sum(english_scrabble[letter.upper()] for letter in word)
+#     else:
+#         return sum(russian_scrabble[letter.upper()] for letter in word)
+#     return 0
+
+# word = input("Enter a word: ")
+# print("The value of the word is:", word_value(word))
+
+# if word.isalpha(): проверяет, состоит ли строка word исключительно из букв.
+# if word.isascii(): проверяет, являются ли все символы в строке word ASCII символами.
+# Таким образом, если выполнены оба условия, то это означает, что строка word состоит исключительно из английских букв.
+
+
+#Другой вариант решения
+# def counter_word(words, leng_dict):
+# word_sum = 0
+# for i in range(len(words)):
+#     word_sum += leng_dict[words[i]]
+#     return word_sum
+
+# en = {'A': 1, 'E': 1, 'I': 1, 'O': 1, 'U': 1, 'L': 1, 'N': 1, 'S': 1, 'T': 1, 'R': 1,
+# 'D': 2, 'G': 2, 'B': 3, 'C': 3, 'M': 3, 'P': 3, 'F': 4, 'H': 4, 'V': 4, 'W': 4, 'Y': 4,
+# 'K': 5, 'J': 8, 'X': 8, 'Q': 10, 'Z': 10}
+# ru = {'А': 1, 'В': 1, 'Е': 1, 'И': 1, 'Н': 1, 'О': 1, 'Р': 1, 'С': 1, 'Т': 1, 'Д': 2, 'К': 2, 'Л': 2, 'М': 2, 'П': 2, 'У': 2,
+# 'Б': 3, 'Г': 3, 'Ё': 3, 'Ь': 3, 'Я': 3, 'Й': 4, 'Ы': 4, 'Ж': 5, 'З': 5, 'Х': 5, 'Ц': 5, 'Ч': 5, 'Ш': 8, 'Э': 8, 'Ю': 8,
+# 'Ф': 10, 'Щ': 10, 'Ъ': 10}
+
+# word = input("Введите слово: ").upper()
+# leng = input("Введите язык (en или ru): ").lower()
+# while (leng !='en') and (leng !='ru'):
+#     leng = input("Введите язык (en или ru): ").lower()
+
+# if leng=='en':
+#     total_sum = counter_word(word, en)
+# elif leng =='ru':
+#     total_sum = counter_word(word, ru)
+# print(total_sum)
