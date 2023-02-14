@@ -5,5 +5,13 @@ import os
 os.system('cls')                                        #Самоочистка терминала
 
 n=int(input('Введите количество элементов в массиве: '))
-my_list=[randint(1, 5) for _ in range(n)]
+my_list=[randint(1, 10) for _ in range(n)]
 print(my_list)
+x=int(input('Введите искомое число: '))
+
+counter=0
+
+for i in range(0, len(my_list)):
+    if my_list[i]==x:
+        counter+=1
+print('Число', x, 'встречается в массиве', counter, 'раз(а).')
