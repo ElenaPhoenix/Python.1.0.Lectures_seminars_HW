@@ -20,3 +20,5 @@ https://pythontutor.ru/
 
 https://www.youtube.com/watch?v=rsG1Y5k-9jo&t=259s - по виртуальному окружению очень хорошее разъясняющее видео.
 
+https://all-python.ru/osnovy/mnozhestva.html - о пайтон доступным языком
+https://pythonpip.ru/examples/kak-preobrazovat-mnozhestvo-v-spisok-v-python-5-metodov
