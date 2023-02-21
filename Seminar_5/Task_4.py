@@ -15,4 +15,3 @@ def recurs(x):
 
 n=6
 recurs(n)
-
