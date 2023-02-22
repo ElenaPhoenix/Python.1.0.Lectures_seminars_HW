@@ -22,3 +22,8 @@ https://www.youtube.com/watch?v=rsG1Y5k-9jo&t=259s - по виртуальном
 
 https://all-python.ru/osnovy/mnozhestva.html - о пайтон доступным языком
 https://pythonpip.ru/examples/kak-preobrazovat-mnozhestvo-v-spisok-v-python-5-metodov
+
+3 основных способа импортировать функцию
+# import Seminar_7                        
+# from Seminar_7 import counting          # импорт определенной функции из файла
+# from Seminar_7 import *                 # импорт всех функций
