@@ -1,5 +1,5 @@
 import pandas as pd
-df=pd.read_csv(Seminar_9/california_housing_train.csv)
+df=pd.read_csv(california_housing_train.csv)
 
 df.shape
 
