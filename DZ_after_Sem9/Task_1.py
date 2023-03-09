@@ -1,25 +1,13 @@
-import random
+# Работать с файлом california_housing_train.csv, который находится в папке sample_data. Определить среднюю стоимость дома, где кол-во людей от 0 до 500 
+# (population)
 import pandas as pd
 
-lst = ['robot'] * 10
-lst += ['human'] * 10
-random.shuffle(lst)
+df = pd.read_csv('california_housing_train.csv')
 
-# создаем новые столбцы, присваиваем им значение False
-data = pd.DataFrame().assign(robot=False, human=False)
+df[(df['population'] > 0) & (df['population'] < 500)].median_house_value.mean()
 
-# функция, которую будем применять к каждому элементу столбца 'whoAmI'
-def set_one_hot(row):
-    if row['whoAmI'] == 'robot':
-        row['robot'] = True
-    elif row['whoAmI'] == 'human':
-        row['human'] = True
-    return row
 
-# применяем функцию set_one_hot() к каждой строке в столбце 'whoAmI'
-data = data.assign(whoAmI=lst).apply(set_one_hot, axis=1)
+# Узнать какая максимальная households в зоне минимального значения population
 
-# удаляем исходный столбец 'whoAmI'
-data = data.drop(columns=['whoAmI'])
-
-print(data.head())
+min_population = df.population.min()
+df[df['population'] == min_population].households.max()
