@@ -21,11 +21,19 @@
 # print(my_list)
 
 
-# Решение через срезы
+# my_list=[1,2,3,4,5]
+# k=int(input())
+# for i in range(k):
+#     my_list.insert(0,my_list.pop())
+# print(*my_list)
+
+# Решения через срезы
 your_list=[int(input('type element: ')) for i in range(int(input('type amount: ')))]
 k=int(input('type K: '))%len(your_list)                                                 # % - чтобы счетчик дважды не проходил весь список, если длина меньше, чем сдвиг элементов 
 print(your_list)
 k_list=your_list[k:]+your_list[:k]
 print(k_list)
 
-
+# my_list=[1,2,3,4,5]
+# k=int(input())
+# print(*my_list[-k:],*my_list[:len(my_list)-k])

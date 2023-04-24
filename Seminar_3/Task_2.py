@@ -3,4 +3,4 @@
 my_list = [1, 1, 2, 0, -1, 3, 4, 4]
 # my_list=set(my_list)
 # print(len(my_list))
-print(len(set(my_list)))
+print(len(set(my_list))) #set-множество только с уникальными элементами. загнав в set, остаются только уникальные значения 
